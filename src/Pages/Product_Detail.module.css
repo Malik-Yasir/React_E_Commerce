@@ -1,0 +1,91 @@
+.container {
+  max-width: 1140px;
+  margin: 3rem 5%;
+  padding: 0 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: var(--primary-bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.imgWrapper {
+  flex: 1 1 40%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.img {
+  padding: 30px;
+  width: 100%;
+  max-width: 200px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05),
+              0 0 15px rgba(255, 165, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.img:hover{
+  transform: translateY(-5px) ;
+  box-shadow: var(--hover-box-shadow);
+}
+
+.cardBody {
+  flex: 1 1 60%;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #facc15;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: #ff5722;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05),
+              0 0 15px rgba(255, 165, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e68a19;
+  transform: translateZ(-8px) ;
+  box-shadow: var(--hover-box-shadow);
+}
+
+.heading {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}

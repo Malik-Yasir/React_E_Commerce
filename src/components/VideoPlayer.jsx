@@ -1,13 +1,20 @@
-import React from 'react'
+// VideoPlayer.jsx
+import React from 'react';
+import styles from './VideoPlayer.module.css';
 
-const VideoPlayer = ({src}) => {
+const VideoPlayer = ({ src }) => {
   return (
-    <>
-    <div className="video-container">
-      <video src={src} className='video-player' autoPlay loop muted playsInline/>
+    <div className={styles.videoContainer}>
+      <video
+        src={src}
+        className={styles.videoPlayer}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default VideoPlayer
+export default VideoPlayer;

@@ -20,10 +20,13 @@ body::-webkit-scrollbar{
   --transition: transform 0.3s ease-in-out, var(--box-shadow) 0.3s;
   
 }
-                /* Navbar styling  */
+                /* Navbar styling 
 .items-nav{
  position: relative;
  left: -40px;
+}
+.navTitle{
+  font-weight: bold; 
 }
 .search-container{
 max-width: 400px;
@@ -73,18 +76,6 @@ width: 100%;
   height: auto;
   display: block;
   border-radius: var(--border-radius);
-}
-@media screen and (max-width: 998px) {
-  .search-container{
-    max-width: 400px;
-    width: auto;
-}
-.slider-container{
-    display: none;
-  }
-  .nav-items{
-    display: none;
-  }
 }
 /* product styling  */
 .cart-card,
@@ -185,26 +176,6 @@ width: 100%;
 .slide-image:hover {
   transform: scale(1.02);
 }
-
-/* Tablet (min-width 600px)  */
-@media screen and (min-width: 600px) {
-  .slider-container {
-    padding: 20px 32px;
-  }
-
-  .slide-image {
-    max-width: 90%;
-  }
-  
-}
-
-/*Small Desktop (optional, min-width 768px) */
-@media screen and (min-width: 768px) {
-  .slide-image {
-    max-width: 600px;
-  }
-}
-
 /* ShopByCategories Styling  */
 .FilterIcons{
 display: flex;
@@ -227,6 +198,18 @@ font-weight: bold;
 border-radius: 10px;
 cursor: pointer;
 }
+@media screen and (max-width: 998px) {
+  .search-container{
+    max-width: 400px;
+    width: auto;
+}
+.slider-container{
+    display: none;
+  }
+  .nav-items{
+    display: none;
+  }
+}
 @media screen and (max-width: 768px){
 .Filter-Btn{
   font-size: 10px;
@@ -238,13 +221,36 @@ cursor: pointer;
   font-weight: bold;
 }
 }
-@media screen and (max-width: 830px) {
-  .FilterContainer{
-    position: relative;
-    bottom: 150px;
-  }
-  .container{
-    position: relative;
-    bottom: 150px;
-  }
+
+@media screen and (max-width: 498px){
+.FilterContainer{
+  margin: auto;
 }
+.card-btn{
+  padding: 5px 7px; 
+}
+.search-input{
+  width: 110px;
+  font-size: 14px;
+}
+.navTitle{
+  font-size: 12px;
+  font-weight: bold;
+}
+.FilterIcons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.proContainer{
+  position: relative;
+  bottom: 400px;
+}
+.FilterContainer{
+  position: relative;
+  bottom: 400px;
+}
+
+}; */
+

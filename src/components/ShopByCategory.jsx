@@ -1,3 +1,4 @@
+// ShopByCategory.jsx
 import React, { useContext, useState } from "react";
 import {
   FaMobileAlt,
@@ -5,13 +6,13 @@ import {
   FaTabletAlt,
   FaClock,
   FaThLarge,
-  FaRubleSign,
 } from "react-icons/fa";
 import DataContext from "../context/DataContext";
 import { items } from "../context/Data";
+import styles from "./ShopByCategory.module.css";
 
 const categories = [
-  { Name: "All Products", icons: <FaThLarge /> },
+  { Name: "All", icons: <FaThLarge /> },
   { Name: "Mobiles", icons: <FaMobileAlt /> },
   { Name: "Laptops", icons: <FaLaptop /> },
   { Name: "Tablets", icons: <FaTabletAlt /> },
@@ -22,53 +23,58 @@ const priceRange = [30000, 40000, 50000, 60000, 70000, 80000];
 
 const ShopByCategory = () => {
   const { setProducts } = useContext(DataContext);
-
   const [selectedPrice, setSelectedPrice] = useState(80000);
 
-  const filterByCategory = (cat)=>{
-    if(cat=='All Products'){
+  const filterByCategory = (cat) => {
+    if (cat === "All") {
       setProducts(items);
-      return
+      return;
     }
-    setProducts(items.filter(pro=>pro.category.toLocaleLowerCase()===cat.toLocaleLowerCase()))
-  }
+    setProducts(
+      items.filter(
+        (pro) =>
+          pro.category.toLocaleLowerCase() === cat.toLocaleLowerCase()
+      )
+    );
+  };
 
-  const filterByPrice = (price)=>{
-    setProducts(items.filter(pro=>pro.price <= price))
-  }
+  const filterByPrice = (price) => {
+    setSelectedPrice(price);
+    setProducts(items.filter((pro) => pro.price <= price));
+  };
+
   return (
-    <>
-      <div className="container bg-dark text-light my-4 p-4 rounded FilterContainer">
-        <h3 className="text-center mb-3">Filter Products</h3>
-        <div className="d-flex justify-content-center align-items-center gap-3 mb-4">
-          {categories.map(({ Name, icons }) => (
-            <div
-              key={Name}
-              style={{ cursor: "pointer" }}
-              className="FilterIcons"
-              onClick={()=>filterByCategory(Name)}
-            >
-              {icons} <span>{Name}</span>
-            </div>
-          ))}
-        </div>
-        <div className="d-flex justify-content-center align-items-center gap-3 ">
-          {priceRange.map((value) => (
-            <span
-              key={value}
-               onClick={()=>filterByPrice(value)}
-              className={`Filter-Btn ${
-                selectedPrice === value
-                  ? "bg-warning text-dark"
-                  : "bg-light text-dark"
-              }`}
-            >
-              {value}PKR
-            </span>
-          ))}
-        </div>
+    <div className={styles.container}>
+      <h3 className={styles.heading}>Filter Products</h3>
+
+      {/* Category Icons */}
+      <div className={styles.iconGroup}>
+        {categories.map(({ Name, icons }) => (
+          <div
+            key={Name}
+            className={styles.iconItem}
+            onClick={() => filterByCategory(Name)}
+          >
+            {icons} <span>{Name}</span>
+          </div>
+        ))}
       </div>
-    </>
+
+      {/* Price Filter Buttons */}
+      <div className={styles.priceGroup}>
+        {priceRange.map((value) => (
+          <span
+            key={value}
+            onClick={() => filterByPrice(value)}
+            className={`${styles.priceBtn} ${
+              selectedPrice === value ? styles.selectedPrice : ""
+            }`}
+          >
+            {value}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 };
 

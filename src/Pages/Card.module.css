@@ -1,0 +1,149 @@
+.wrapper {
+  padding: 40px 20px;
+}
+
+.emptyCart {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.continueBtn {
+  margin-top: 20px;
+  background-color: #ffc107;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.continueBtn:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.cardWrapper {
+  max-width: 750px;
+  width: 100%;
+}
+
+.card {
+  background: var(--primary-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: var(--border);
+}
+
+.cardInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.imageWrapper {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.cartImg {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid #ffc107;
+  background-color: white;
+  transition: 0.3s ease;
+}
+.cartImg:hover{
+  transform: scale(1.05);
+  box-shadow: var(--hover-box-shadow);
+}
+
+.contentWrapper {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.productDescription {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.productPrice {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffc107;
+}
+
+.buyNowBtn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.buyNowBtn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.actionButtons {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.checkoutBtn,
+.clearBtn {
+  background-color: #ffc107;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  margin: 0 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.clearBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.clearBtn:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.checkoutBtn:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}

@@ -39,7 +39,7 @@ export const items = [
   {
     id: 6,
     category: "tablets",
-    title: "Lenovo Tab P12 Pro AMOLED",
+    title: "Lenovo Tab P12 Pro",
     imgSrc: "https://m.media-amazon.com/images/I/51b9LjzmPCL._SL1080_.jpg",
     amazonLink: "https://amzn.to/3RabsdH",
     description:
@@ -77,7 +77,7 @@ export const items = [
   {
     id: 8,
     category: "laptops",
-    title: "Apple MacBook Air Laptop",
+    title: "Apple Mac Air Laptop",
     imgSrc: "https://m.media-amazon.com/images/I/71TPda7cwUL._SL1500_.jpg",
     amazonLink: "https://amzn.to/3r9rvhm",
     description:
@@ -117,7 +117,7 @@ export const items = [
   {
     id: 13,
     category: "mobiles",
-    title: "Samsung Galaxy S25 Ultra",
+    title: "Samsung S25 Ultra",
     imgSrc: "https://m.media-amazon.com/images/I/71uqj6BKnRL._AC_UY218_.jpg",
     amazonLink: "#",
     description:
@@ -127,7 +127,7 @@ export const items = [
   {
     id: 14,
     category: "mobiles",
-    title: "Samsung Galaxy S23 Ultra",
+    title: "Samsung Galaxy S23",
     imgSrc: "https://m.media-amazon.com/images/I/71lD7eGdW-L._AC_UY218_.jpg",
     amazonLink: "#",
     description:
@@ -191,7 +191,7 @@ export const items = [
   {
     id: 21,
     category: "watches",
-    title: "Apple Watch Series - 9",
+    title: "Apple Watch Series",
     imgSrc: "https://m.media-amazon.com/images/I/71xQgYQZ5FL._AC_UL320_.jpg",
     amazonLink: "#",
     description: "Apple Watch SE 2024, ultimate performance for professionals",

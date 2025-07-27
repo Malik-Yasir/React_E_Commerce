@@ -1,0 +1,31 @@
+.sliderContainer {
+  margin: 40px 0;
+  padding: 0 10px;
+}
+
+.slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideImage {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 2px solid royalblue;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slideImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.3);
+  border-color: #0033cc;
+}
+
+@media (max-width: 800px){
+  .sliderContainer{
+    display: none;
+  }
+}

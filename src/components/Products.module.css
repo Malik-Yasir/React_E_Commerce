@@ -1,0 +1,107 @@
+.proContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  padding: 10px;
+  max-width: 1200px;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.card {
+  background: var(--hover-bg);
+  border-radius: 15px;
+  padding: 20px 15px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05),
+              0 0 15px rgba(255, 165, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: var(--border);
+  align-items: center;
+
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--hover-box-shadow);
+}
+
+.imageContainer {
+  background: white;
+  border: var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 180px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 0.3s ease;
+  text-align: center;
+}
+
+.card:hover .imageContainer {
+  border-color: #ff9800;
+  transition: var(--transition);
+}
+
+.productImage {
+  max-height: 160px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.productImage:hover{
+  transition: var(--transition);
+}
+
+.cardBody {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.productTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.productPrice {
+  font-size: 17px;
+  font-weight: 700;
+  color: #facc15;
+  margin: 0;
+}
+
+.addToCartBtn {
+  background-color: #ff5722;
+  color: white;
+  width: 150px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addToCartBtn:hover {
+  background-color: #e64a19;
+}
