@@ -153,6 +153,10 @@
 }
 /* Mobile View: Up to 480px */
 @media (max-width: 480px) {
+
+  .container{
+  padding: 7px 15px;
+  }
   .logoIcon {
     font-size: 1.3rem;
     margin-right: 4px;
